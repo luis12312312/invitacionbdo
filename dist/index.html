@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#253e34">
+  <meta name="description" content="Luis y Aurora: cincuenta años, una vida juntos y el mismo amor. Celebremos nuestras bodas de oro el sábado 6 de marzo en Aculeo.">
+  <meta property="og:title" content="Luis y Aurora · Bodas de Oro">
+  <meta property="og:description" content="Sábado 6 de marzo · Aculeo. Nuestra historia continúa. Y queremos celebrarla contigo.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CL">
+  <meta property="og:image" content="/assets/foto1.png">
+  <title>Luis y Aurora · 50 años del mismo amor</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="config.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <svg class="svg-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <symbol id="sprig" viewBox="0 0 130 240">
+        <path d="M65 232C51 167 86 105 63 12M64 206C33 186 24 164 25 151M63 181C96 156 104 140 105 120M67 150C41 136 26 114 24 94M69 115C95 98 104 77 102 62M68 82C47 65 38 46 40 28M64 43C75 33 78 20 75 7"/>
+        <path d="M25 151C48 151 57 170 64 190C38 188 21 175 25 151ZM105 120C82 124 72 144 66 163C90 160 109 143 105 120ZM24 94C47 96 61 113 68 133C42 131 23 117 24 94ZM102 62C82 67 74 83 70 102C91 97 106 83 102 62ZM40 28C58 38 64 53 67 72C47 63 34 48 40 28Z"/>
+      </symbol>
+      <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+      <symbol id="star" viewBox="0 0 24 24"><path d="M12 0c0 9-3 12-12 12 9 0 12 3 12 12 0-9 3-12 12-12-9 0-12-3-12-12Z"/></symbol>
+      <symbol id="pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="2.7"/></symbol>
+      <symbol id="calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 2v6m10-6v6M3 11h18m-13 5h2m4 0h2"/></symbol>
+      <symbol id="heart" viewBox="0 0 24 24"><path d="m12 21-8.5-8.5a5.7 5.7 0 0 1 8-8L12 5l.5-.5a5.7 5.7 0 0 1 8 8Z"/></symbol>
+      <symbol id="chat" viewBox="0 0 24 24"><path d="M21 11.5a9 9 0 0 1-13 8.1L3 21l1.4-5A9 9 0 1 1 21 11.5Z"/><path d="M8 8.5h8M8 12h6"/></symbol>
+      <symbol id="gate-art" viewBox="0 0 400 850">
+        <path d="M18 838V253C18 107 94 18 200 18s182 89 182 235v585ZM34 822V257C34 124 103 37 200 37s166 87 166 220v565Z"/>
+        <path d="M67 818V285Q67 90 200 70q133 20 133 215v533M111 818V264q0-136 89-169 89 33 89 169v554M155 818V248q0-89 45-127 45 38 45 127v570M200 122v696M18 630h364M18 649h364M18 762h364M18 779h364"/>
+        <path d="M200 350c-120 0-159-96-108-112 44-14 52 51 23 50-40-1-6-76 85-36 91-40 125 35 85 36-29 1-21-64 23-50 51 16 12 112-108 112ZM200 350c-115 75-138 164-80 168 47 3 25-68 0-35-23 31 33 60 80-3 47 63 103 34 80 3-25-33-47 38 0 35 58-4 35-93-80-168Z"/>
+        <path d="m200 298 23 52-23 54-23-54Zm-89 350 44 58-44 56-44-56Zm178 0 44 58-44 56-44-56ZM200 37l-13 19 13 20 13-20Z"/>
+        <circle cx="200" cy="350" r="9"/><circle cx="67" cy="630" r="6"/><circle cx="333" cy="630" r="6"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <a class="skip-link" href="#inicio">Ir a la invitación</a>
+  <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+    <div class="gate-glow"></div>
+    <div class="gate-leaf gate-left"><svg aria-hidden="true"><use href="#gate-art"/></svg></div>
+    <div class="gate-leaf gate-right"><svg aria-hidden="true"><use href="#gate-art"/></svg></div>
+    <div class="gate-intro">
+      <span class="eyebrow">HAY HISTORIAS QUE MERECEN CELEBRARSE</span>
+      <div class="gate-number" aria-hidden="true">50<span>años</span></div>
+      <h1 id="gate-title">Las puertas de<br>nuestra historia</h1>
+      <p>Medio siglo juntos.<br>Y la alegría de compartirlo contigo.</p>
+      <button id="enter-button" class="enter-button"><span>Abrir invitación</span><svg aria-hidden="true"><use href="#arrow"/></svg></button>
+      <span class="gate-footnote">BODAS DE ORO <i>✦</i> UNA VIDA DE AMOR</span>
+    </div>
+    <button class="skip-intro" id="skip-intro">Saltar introducción</button>
+  </div>
+
+  <div id="invitation">
+    <header class="site-header">
+      <a href="#inicio" class="brand" aria-label="Bodas de oro, inicio"><span class="brand-number">50</span><span>BODAS<br>DE ORO</span></a>
+      <nav aria-label="Navegación principal"><a href="#historia">Nuestra historia</a><a href="#celebracion">La celebración <span>↗</span></a></nav>
+      <button id="sound-button" class="sound-button" aria-pressed="false" aria-label="Activar música de piano"><span class="sound-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span id="sound-label">Música</span></button>
+    </header>
+
+    <main id="inicio" tabindex="-1">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow hero-animate"><span class="small-rule"></span> CINCUENTA AÑOS ELIGIÉNDONOS</p>
+          <h2 id="hero-title" class="hero-animate">Toda una vida.<br><em>El mismo amor.</em></h2>
+          <p class="couple-names hero-animate" data-couple hidden></p>
+        </div>
+        <div class="hero-visual hero-animate">
+          <div class="portrait-orbit"></div>
+          <div class="portrait-frame"><img src="assets/foto1.png" width="1157" height="1536" alt="Los festejados, juntos y tomados de las manos, vestidos en tonos dorados" fetchpriority="high"></div>
+          <svg class="hero-sprig" aria-hidden="true"><use href="#sprig"/></svg>
+          <div class="portrait-caption"><span>Una promesa.</span><em>Toda una vida.</em><svg aria-hidden="true"><use href="#star"/></svg></div>
+          <span class="portrait-side-label">NUESTRA HISTORIA DE AMOR, CONTINÚA</span>
+        </div>
+        <div class="hero-support">
+          <p class="hero-description hero-animate">Hay un amor que crece con los años,<br>echa raíces y se convierte en hogar.<br>Hoy queremos celebrar el nuestro contigo.</p>
+          <a href="#historia" class="text-link hero-animate">Descubre nuestra historia <svg aria-hidden="true"><use href="#arrow"/></svg></a>
+          <div class="hero-bottom hero-animate"><span>CONCEPCIÓN <b>—</b> SANTIAGO <b>—</b> ACULEO</span><span class="scroll-cue">DESLIZA PARA SENTIR <span>↓</span></span></div>
+        </div>
+      </section>
+
+      <div class="chapter-divider" aria-hidden="true"><span></span><svg><use href="#star"/></svg><span></span></div>
+
+      <section id="historia" class="story-section" aria-labelledby="story-title">
+        <div class="story-heading reveal"><p class="eyebrow">LAS RAÍCES DE LO QUE SOMOS</p><h2 id="story-title">El viaje más bonito<br>fue <em>encontrarnos.</em></h2><p>En Concepción nació nuestro amor.<br>Juntos emprendimos el camino a Santiago.</p></div>
+        <div class="story-timeline">
+          <svg class="journey-line" viewBox="0 0 1000 130" preserveAspectRatio="none" aria-hidden="true"><path d="M0 66C190-55 270 180 495 66S770-30 1000 66"/></svg>
+          <article class="story-chapter reveal"><span class="chapter-number">01</span><p class="eyebrow">EL ENCUENTRO · CONCEPCIÓN</p><h3>Donde comenzó el amor</h3><p>Nos conocimos en Concepción, con las raíces en el sur y muchos sueños por delante. Allí nació el amor que nos animó a mirar el futuro juntos.</p><span class="chapter-note">Donde empezó nuestra historia.</span></article>
+          <article class="story-chapter reveal"><span class="chapter-number">02</span><p class="eyebrow">EL VIAJE JUNTOS · SANTIAGO</p><h3>Un nuevo comienzo, juntos</h3><p>Dejamos Concepción y partimos juntos a Santiago en busca de nuevas oportunidades. Con nuestras raíces del sur y el amor como compañía, comenzamos a escribir un nuevo capítulo.</p><span class="chapter-note">Nuevos sueños, de la mano.</span></article>
+          <article class="story-chapter reveal"><span class="chapter-number">03</span><p class="eyebrow">LA VIDA JUNTOS · NUESTRO HOGAR</p><h3>El amor se hizo familia</h3><p>Con esfuerzo, esperanza y las manos siempre unidas, construimos un hogar. Superamos desafíos y llenamos la vida de ese amor que hoy nos reúne como familia.</p><span class="chapter-note">Donde todo cobró sentido.</span></article>
+        </div>
+        <div class="story-end reveal"><svg aria-hidden="true"><use href="#star"/></svg><p>Y cincuenta años después…<br><em>volveríamos a elegirnos.</em></p></div>
+      </section>
+
+      <section class="love-section" aria-labelledby="love-title">
+        <div class="memory-album reveal">
+          <figure class="wedding-memory">
+            <button class="wedding-photo-button" id="wedding-photo-button" aria-label="Ampliar la fotografía del casamiento de Luis y Aurora" aria-haspopup="dialog">
+              <img src="assets/Casamiento.png" width="1088" height="1445" loading="lazy" alt="Luis y Aurora jóvenes, vestidos de novios el día de su casamiento">
+              <span class="view-photo">Ampliar recuerdo <span aria-hidden="true">↗</span></span>
+            </button>
+            <figcaption><span class="eyebrow">EL DÍA DE NUESTRO SÍ</span><em>Aquí comenzó nuestro para siempre.</em></figcaption>
+            <span class="photo-corner top-left" aria-hidden="true"></span>
+          </figure>
+          <span class="memory-connection" aria-hidden="true">Una promesa.<br>Toda una vida.<svg><use href="#heart"/></svg></span>
+          <figure class="today-memory"><img src="assets/foto2.png" width="1088" height="1445" loading="lazy" alt="Luis y Aurora en la actualidad, juntos y tomados de las manos"><figcaption>Y seguimos eligiéndonos.</figcaption></figure>
+        </div>
+        <div class="love-copy reveal"><p class="eyebrow">NUESTRAS BODAS DE ORO</p><span class="large-fifty" aria-hidden="true">50</span><h2 id="love-title">No contamos los años.<br><em>Contamos lo vivido.</em></h2><p>Aquel día nos dijimos «sí», sin imaginar cuántos recuerdos cabrían en una vida juntos.</p><p>Las pequeñas alegrías. Los días difíciles que atravesamos juntos. La mesa compartida. Los abrazos que siempre fueron refugio.</p><p>Hoy miramos atrás con gratitud, y hacia adelante con la misma certeza: lo más hermoso de esta historia es haberla escrito juntos.</p><div class="handwritten">Y tú eres parte de ella.</div><svg class="love-sprig" aria-hidden="true"><use href="#sprig"/></svg></div>
+      </section>
+
+      <section id="celebracion" class="celebration" aria-labelledby="celebration-title">
+        <svg class="celebration-sprig sprig-left" aria-hidden="true"><use href="#sprig"/></svg><svg class="celebration-sprig sprig-right" aria-hidden="true"><use href="#sprig"/></svg>
+        <div class="celebration-heading reveal"><p class="eyebrow">EL PRÓXIMO CAPÍTULO ES CONTIGO</p><h2 id="celebration-title">Celebremos<br><em>lo que permanece.</em></h2><p>Queremos rodearnos de quienes han sido parte de nuestro camino.<br> Ven a brindar por la familia, por los recuerdos y por todo el amor que viene.</p></div>
+        <div class="event-details reveal">
+          <div class="event-detail"><svg aria-hidden="true"><use href="#calendar"/></svg><span class="eyebrow">CUÁNDO NOS ENCONTRAMOS</span><h3 id="event-date">Una fecha muy especial</h3><p id="event-time">Fecha y horario por confirmar</p></div>
+          <span class="event-divider" aria-hidden="true"></span>
+          <div class="event-detail"><svg aria-hidden="true"><use href="#pin"/></svg><span class="eyebrow">DÓNDE CELEBRAMOS</span><h3>Aculeo</h3><p id="event-address">Dirección de la recepción por confirmar</p></div>
+        </div>
+        <p class="event-note reveal" id="event-note">Pronto compartiremos los detalles para encontrarnos.</p>
+        <div class="rsvp-block reveal" aria-labelledby="rsvp-title"><h3 id="rsvp-title">Nos hará felices contar contigo.</h3><p>Envíanos un mensaje para confirmar tu asistencia.</p><a id="rsvp-link" class="rsvp-button" href="https://wa.me/56974760287" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#chat"/></svg><span>Confirmar por WhatsApp</span><span aria-hidden="true">↗</span></a><span id="rsvp-phone" class="rsvp-phone">+56 9 7476 0287</span></div>
+        <div class="gift-note reveal"><svg aria-hidden="true"><use href="#heart"/></svg><h3>El mejor regalo es tu presencia.</h3><p>No necesitamos regalos. Tenerte cerca es nuestra mayor alegría.<br>Si de todas formas deseas dejarnos un cariño, lo recibiremos con mucho amor.</p><button class="text-link" id="gift-button">Un detalle con cariño <span>+</span></button></div>
+      </section>
+
+      <section class="closing reveal" aria-labelledby="closing-title"><svg aria-hidden="true"><use href="#star"/></svg><p class="eyebrow">GRACIAS POR SER PARTE DE NUESTRA VIDA</p><h2 id="closing-title">Las mejores historias<br>se celebran <em>juntos.</em></h2><p>Con todo nuestro amor.</p><p class="closing-names" data-couple hidden></p><div class="closing-signature">Nuestras bodas de oro</div><button id="share-button" class="share-button">Compartir invitación <svg aria-hidden="true"><use href="#arrow"/></svg></button><p id="share-status" class="status" role="status"></p></section>
+    </main>
+    <footer><span>50 AÑOS <i>✦</i> UNA VIDA DE AMOR</span><button id="replay-button">Volver a abrir la historia ↗</button><span>HECHO CON EL CORAZÓN</span></footer>
+  </div>
+
+  <dialog id="gift-dialog" aria-labelledby="gift-title"><button class="dialog-close" id="close-gift" aria-label="Cerrar detalles de regalo">×</button><svg class="dialog-heart" aria-hidden="true"><use href="#heart"/></svg><p class="eyebrow">UN GESTO DE CARIÑO</p><h2 id="gift-title">Tu compañía<br><em>es lo primero.</em></h2><p>Si deseas hacernos un regalo, puedes usar esta cuenta. Gracias por acompañarnos con tanto amor.</p><div class="account-details"><span>CuentaRUT · BancoEstado</span><strong id="account-number">7869990</strong></div><button id="copy-account" class="solid-button">Copiar número de cuenta <span>⧉</span></button><p id="copy-status" class="status" role="status"></p></dialog>
+  <dialog id="wedding-dialog" class="wedding-dialog" aria-labelledby="wedding-dialog-title"><button class="dialog-close" id="close-wedding" aria-label="Cerrar fotografía del casamiento">×</button><h2 id="wedding-dialog-title" class="eyebrow">EL DÍA DE NUESTRO SÍ</h2><img src="assets/Casamiento.png" width="1088" height="1445" loading="lazy" alt="Fotografía completa de Luis y Aurora el día de su casamiento"><p>Aquí comenzó nuestro para siempre.</p></dialog>
+  <div id="global-status" class="sr-only" role="status"></div>
+</body>
+</html>

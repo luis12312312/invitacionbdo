@@ -1,0 +1,9 @@
+{
+  "name": "invitacion-bodas-de-oro",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Invitación a las bodas de oro de Luis y Aurora, en HTML, CSS y JavaScript.",
+  "scripts": {
+    "build": "node scripts/build.mjs"
+  }
+}
