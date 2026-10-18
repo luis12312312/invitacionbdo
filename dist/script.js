@@ -7,10 +7,10 @@
   const invitation = $('#invitation');
   let gateTimer;
   let entered = false;
-  let musicContext;
-  let musicTimer;
+  const music = $('#background-music');
   let musicOn = false;
-  let noteIndex = 0;
+  let musicRequest = 0;
+  music.volume = 0.28;
 
   if (config.names) document.querySelectorAll('[data-couple]').forEach(el => {
     el.textContent = config.names;
@@ -75,55 +75,49 @@
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   } else document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
 
-  // A gentle, original piano-like arpeggio. It starts only after an explicit click.
-  const notes = [261.63, 329.63, 392, 523.25, 440, 349.23, 293.66, 349.23, 220, 261.63, 329.63, 440, 196, 246.94, 293.66, 392];
-  function playNote() {
-    if (!musicOn || !musicContext || musicContext.state !== 'running') return;
-    const time = musicContext.currentTime;
-    const frequency = notes[noteIndex++ % notes.length];
-    [1, 2, 3].forEach((harmonic, index) => {
-      const oscillator = musicContext.createOscillator();
-      const envelope = musicContext.createGain();
-      oscillator.type = 'sine';
-      oscillator.frequency.value = frequency * harmonic;
-      envelope.gain.setValueAtTime(0, time);
-      envelope.gain.linearRampToValueAtTime(0.035 / (harmonic * harmonic), time + 0.018);
-      envelope.gain.exponentialRampToValueAtTime(0.0001, time + 2.8 - index * 0.3);
-      oscillator.connect(envelope);
-      envelope.connect(musicContext.destination);
-      oscillator.start(time);
-      oscillator.stop(time + 3);
-      oscillator.onended = () => { oscillator.disconnect(); envelope.disconnect(); };
-    });
-  }
+  // Load the supplied recording only when the visitor activates the music.
   function updateSoundButton() {
     $('#sound-button').setAttribute('aria-pressed', String(musicOn));
-    $('#sound-button').setAttribute('aria-label', musicOn ? 'Silenciar música de piano' : 'Activar música de piano');
+    $('#sound-button').setAttribute('aria-label', musicOn ? 'Silenciar música de la invitación' : 'Activar música de la invitación');
     $('#sound-label').textContent = musicOn ? 'Silenciar' : 'Música';
   }
-  $('#sound-button').addEventListener('click', async () => {
+  async function startMusic() {
+    const request = ++musicRequest;
+    musicOn = true;
+    updateSoundButton();
+    $('#global-status').textContent = '';
     try {
-      const AudioContext = window.AudioContext || window.webkitAudioContext;
-      if (!AudioContext) { $('#global-status').textContent = 'Tu navegador no admite la música de esta invitación.'; return; }
-      if (!musicContext) musicContext = new AudioContext();
-      musicOn = !musicOn;
-      window.clearInterval(musicTimer);
-      if (musicOn) {
-        await musicContext.resume();
-        playNote();
-        musicTimer = window.setInterval(playNote, 740);
-      } else await musicContext.suspend();
-      updateSoundButton();
+      if (music.error) music.load();
+      await music.play();
+      if (request !== musicRequest) return;
+      if (!musicOn || document.hidden) music.pause();
     } catch {
+      if (request !== musicRequest) return;
       musicOn = false;
       updateSoundButton();
-      $('#global-status').textContent = 'No se pudo iniciar la música en este navegador.';
+      $('#global-status').textContent = 'No se pudo iniciar la música. Pulsa Música para intentarlo de nuevo.';
     }
+  }
+  $('#sound-button').addEventListener('click', () => {
+    if (musicOn) {
+      musicRequest++;
+      musicOn = false;
+      music.pause();
+      updateSoundButton();
+    } else startMusic();
+  });
+  music.addEventListener('error', () => {
+    musicRequest++;
+    musicOn = false;
+    updateSoundButton();
+    $('#global-status').textContent = 'No se pudo cargar la música. Pulsa Música para intentarlo de nuevo.';
   });
   document.addEventListener('visibilitychange', () => {
-    if (!musicContext || !musicOn) return;
-    if (document.hidden) musicContext.suspend();
-    else musicContext.resume();
+    if (!musicOn) return;
+    if (document.hidden) {
+      musicRequest++;
+      music.pause();
+    } else startMusic();
   });
 
   const giftDialog = $('#gift-dialog');

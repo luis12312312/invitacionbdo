@@ -39,6 +39,12 @@ python -m http.server 8080 --directory build
 
 Visita `http://localhost:8080`. La música se inicia únicamente al pulsar su botón; las animaciones respetan la preferencia de movimiento reducido.
 
+## Música
+
+La grabación proporcionada es **The Godfather – Orchestral Suite · The Danish National Symphony Orchestra (Live)**. Se encuentra en `dist/assets/music/the-godfather-orchestral-suite.mp3`.
+
+El archivo se carga al pulsar **Música**, se reproduce en bucle y comienza con un volumen de fondo del 28 %. El botón **Silenciar** lo pausa sin perder la posición. También se pausa al ocultar la pestaña y continúa al regresar si el visitante tenía la música activada.
+
 ## Estructura
 
 ```text
@@ -52,6 +58,8 @@ dist/
     foto2.png
     Casamiento.png
     favicon.svg
+    music/
+      the-godfather-orchestral-suite.mp3
 scripts/
   build.mjs
 package.json
