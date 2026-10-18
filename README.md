@@ -37,13 +37,15 @@ npm run build
 python -m http.server 8080 --directory build
 ```
 
-Visita `http://localhost:8080`. La música se inicia únicamente al pulsar su botón; las animaciones respetan la preferencia de movimiento reducido.
+Visita `http://localhost:8080`. La música comienza al pulsar **Abrir invitación**; las animaciones respetan la preferencia de movimiento reducido.
 
 ## Música
 
 La grabación proporcionada es **The Godfather – Orchestral Suite · The Danish National Symphony Orchestra (Live)**. Se encuentra en `dist/assets/music/the-godfather-orchestral-suite.mp3`.
 
-El archivo se carga al pulsar **Música**, se reproduce en bucle y comienza con un volumen de fondo del 28 %. El botón **Silenciar** lo pausa sin perder la posición. También se pausa al ocultar la pestaña y continúa al regresar si el visitante tenía la música activada.
+La página prepara los metadatos del archivo y la música comienza al pulsar **Abrir invitación** o **Saltar introducción**, al mismo tiempo que se abren los portones. El audio se inicia directamente dentro de ese clic para conservar la interacción que necesitan los navegadores móviles.
+
+Se reproduce en bucle con un volumen de fondo del 28 %. El botón **Silenciar** lo pausa sin perder la posición y **Música** lo reanuda. También se pausa al ocultar la pestaña y continúa al regresar si el visitante tenía la música activada.
 
 ## Estructura
 

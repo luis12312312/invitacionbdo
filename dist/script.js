@@ -33,17 +33,19 @@
     gate.setAttribute('aria-hidden', 'true');
     $('#inicio').focus({ preventScroll: true });
   }
-  function enter(skip = false) {
+  function enter(skip = false, withMusic = false) {
     if (entered) return;
     entered = true;
+    // Keep playback inside the click gesture so mobile browsers can start it.
+    if (withMusic && !musicOn) startMusic();
     invitation.inert = false;
     gate.classList.add('opening');
     document.documentElement.classList.add('entered');
     if (skip || reducedMotion.matches) finishEntrance();
     else gateTimer = window.setTimeout(finishEntrance, 2350);
   }
-  $('#enter-button').addEventListener('click', () => enter());
-  $('#skip-intro').addEventListener('click', () => enter(true));
+  $('#enter-button').addEventListener('click', () => enter(false, true));
+  $('#skip-intro').addEventListener('click', () => enter(true, true));
   $('#replay-button').addEventListener('click', () => {
     window.clearTimeout(gateTimer);
     window.scrollTo({ top: 0, behavior: 'instant' });
@@ -75,7 +77,7 @@
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   } else document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
 
-  // Load the supplied recording only when the visitor activates the music.
+  // Start the supplied recording when opening the invitation or using Música.
   function updateSoundButton() {
     $('#sound-button').setAttribute('aria-pressed', String(musicOn));
     $('#sound-button').setAttribute('aria-label', musicOn ? 'Silenciar música de la invitación' : 'Activar música de la invitación');
