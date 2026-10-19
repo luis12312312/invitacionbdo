@@ -16,7 +16,10 @@
     el.textContent = config.names;
     el.hidden = false;
   });
-  if (config.date) $('#event-date').textContent = config.date;
+  if (config.date) {
+    $('#event-date').textContent = config.date;
+    document.querySelectorAll('[data-event-date]').forEach(el => el.textContent = config.date);
+  }
   if (config.time) $('#event-time').textContent = config.time;
   else if (config.date) $('#event-time').textContent = 'Horario por confirmar';
   if (config.address) $('#event-address').textContent = config.address;
@@ -168,7 +171,7 @@
     const url = window.location.href.split('#')[0];
     try {
       if (navigator.share) {
-        await navigator.share({ title: '50 años del mismo amor', text: 'Nuestra historia continúa. Te invitamos a celebrar nuestras bodas de oro.', url });
+        await navigator.share({ title: 'Luis y Aurora · Bodas de Oro', text: 'Te invitamos a celebrar nuestros cincuenta años de amor.', url });
       } else { await copyText(url); $('#share-status').textContent = 'Enlace copiado para compartir.'; }
     } catch (error) {
       if (error.name !== 'AbortError') $('#share-status').textContent = 'Puedes copiar el enlace desde la barra de tu navegador.';

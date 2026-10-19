@@ -1,6 +1,6 @@
 # Bodas de oro · Luis y Aurora
 
-Invitación en HTML, CSS y JavaScript. Incluye portones animados, la historia de Luis y Aurora, tres fotografías, un álbum con su foto de casamiento ampliable, música opcional y confirmación de asistencia por WhatsApp.
+Invitación breve en HTML, CSS y JavaScript, con fondo crema y tipografía en dorado sobrio. Incluye portones animados, la foto actual y la de casamiento juntas en la portada, detalles de la celebración, tarjetas destacadas de regalos y asistencia, música opcional y confirmación por WhatsApp.
 
 ## Desplegar en Vercel
 
@@ -24,7 +24,7 @@ Modifica `dist/config.js`:
 
 Los textos y la estructura están en `dist/index.html`, los estilos en `dist/styles.css` y las interacciones en `dist/script.js`. Las tres fotografías originales se encuentran en `dist/assets/`.
 
-La historia cuenta que se conocieron en Concepción y juntos partieron a Santiago, donde formaron su hogar y su familia.
+La foto de casamiento de la portada se puede ampliar. Los accesos de regalos y asistencia llevan directamente a sus respectivas tarjetas; los datos bancarios se muestran al pulsar **Ver datos para el regalo**.
 
 El botón de confirmación abre WhatsApp con un mensaje preparado; el invitado lo revisa y envía. La página no guarda confirmaciones automáticamente.
 
