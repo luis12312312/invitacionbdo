@@ -163,18 +163,4 @@
     try { await copyText(config.account || '7869990'); $('#copy-status').textContent = 'Número copiado con cariño.'; }
     catch { $('#copy-status').textContent = 'Puedes seleccionar y copiar el número que aparece arriba.'; }
   });
-  $('#share-button').addEventListener('click', async () => {
-    if (window.location.protocol === 'file:' || ['localhost', '127.0.0.1'].includes(window.location.hostname)) {
-      $('#share-status').textContent = 'Podrás compartir el enlace cuando la invitación esté publicada.';
-      return;
-    }
-    const url = window.location.href.split('#')[0];
-    try {
-      if (navigator.share) {
-        await navigator.share({ title: 'Luis y Aurora · Bodas de Oro', text: 'Te invitamos a celebrar nuestros cincuenta años de amor.', url });
-      } else { await copyText(url); $('#share-status').textContent = 'Enlace copiado para compartir.'; }
-    } catch (error) {
-      if (error.name !== 'AbortError') $('#share-status').textContent = 'Puedes copiar el enlace desde la barra de tu navegador.';
-    }
-  });
 })();
