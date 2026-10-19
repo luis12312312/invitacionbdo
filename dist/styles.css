@@ -56,7 +56,8 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .small-rule { width: 28px; height: 1px; background: var(--gold); }
 .hero h2 { font-size: clamp(55px, 5.7vw, 79px); line-height: 1.02; letter-spacing: -.04em; color: var(--gold); margin: 22px 0 20px; text-wrap: balance; }
 .hero-subtitle { font: 500 clamp(30px, 2.9vw, 41px)/1.1 var(--serif); letter-spacing: -.015em; }
-.hero-description { font-size: 13px; line-height: 1.9; color: var(--muted); max-width: 305px; margin-top: 20px; }
+.hero-description { font-size: 13px; line-height: 1.8; color: var(--muted); max-width: 365px; margin-top: 20px; }
+.hero-description p + p { margin-top: 12px; }
 .hero-visual { position: relative; grid-column: 2; grid-row: 1 / 3; display: grid; grid-template-columns: 1fr 1fr; gap: 19px; align-items: start; min-width: 0; padding: 4px 0 24px; }
 .hero-photo { min-width: 0; text-align: center; }
 .wedding-portrait { padding-top: 35px; }
@@ -174,7 +175,7 @@ dialog > p:not(.eyebrow):not(.status) { font-size: 12px; line-height: 1.85; colo
   .hero h2 { font-size: clamp(45px, 12.7vw, 68px); margin: 13px 0 10px; }
   .hero-subtitle { font-size: 27px; line-height: 1.1; }
   .hero-subtitle br { display: none; }
-  .hero-description { font-size: 11px; line-height: 1.8; max-width: 290px; margin: 12px auto 0; }
+  .hero-description { font-size: 12px; line-height: 1.8; max-width: 350px; margin: 14px auto 0; }
   .hero-visual { grid-column: 1; grid-row: 2; width: min(100%, 430px); justify-self: center; margin-top: 24px; padding-bottom: 8px; gap: 15px; }
   .wedding-portrait { padding-top: 19px; }
   .portrait-frame, .wedding-photo-button { aspect-ratio: .72; padding: 4px; }
