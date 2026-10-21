@@ -4,6 +4,6 @@ window.INVITATION = {
   date: 'Sábado 6 de marzo',
   time: '', // Ejemplo: 'Desde las 18:00 horas'
   address: '', // Dirección del local en Aculeo
-  account: '7869990',
+  account: '7860990',
   whatsapp: '+56 9 7476 0287'
 };

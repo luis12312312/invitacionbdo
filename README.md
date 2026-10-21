@@ -20,7 +20,7 @@ Modifica `dist/config.js`:
 - Fecha: sábado 6 de marzo; horario pendiente.
 - Lugar: Aculeo; dirección pendiente.
 - WhatsApp de confirmación: +56 9 7476 0287.
-- CuentaRUT: 7869990.
+- CuentaRUT: 7860990.
 
 Los textos y la estructura están en `dist/index.html`, los estilos en `dist/styles.css` y las interacciones en `dist/script.js`. Las tres fotografías originales se encuentran en `dist/assets/`.
 
