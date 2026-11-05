@@ -17,7 +17,7 @@ El build utiliza `VERCEL_PROJECT_PRODUCTION_URL` para que la imagen de vista pre
 Modifica `dist/config.js`:
 
 - Nombres: Luis y Aurora.
-- Fecha: sábado 6 de marzo; horario pendiente.
+- Fecha: sábado 6 de marzo, a las 18:00 hrs.
 - Dirección: Aculeo, Miguel Letelier, parcela 1.
 - Mapa: punto confirmado en Google Maps, coordenadas -33.8655997, -70.8640892.
 - WhatsApp de confirmación: +56 9 7476 0287.
