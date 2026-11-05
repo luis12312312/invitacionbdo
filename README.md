@@ -18,7 +18,8 @@ Modifica `dist/config.js`:
 
 - Nombres: Luis y Aurora.
 - Fecha: sábado 6 de marzo; horario pendiente.
-- Lugar: Aculeo; dirección pendiente.
+- Dirección: Aculeo, Miguel Letelier, parcela 1.
+- Mapa: punto confirmado en Google Maps, coordenadas -33.8655997, -70.8640892.
 - WhatsApp de confirmación: +56 9 7476 0287.
 - CuentaRUT: 7860990.
 - Titular: Aurora Jara; RUT: 7860990-7.
@@ -26,6 +27,8 @@ Modifica `dist/config.js`:
 Los textos y la estructura están en `dist/index.html`, los estilos en `dist/styles.css` y las interacciones en `dist/script.js`. Las tres fotografías originales se encuentran en `dist/assets/`.
 
 La foto de casamiento de la portada se puede ampliar. Los accesos de regalos y asistencia llevan directamente a sus respectivas tarjetas; los datos bancarios se muestran al pulsar **Ver datos para el regalo**.
+
+La sección de la celebración incluye un mapa de Google Maps y un botón para abrir el punto exacto. La dirección y el enlace del mapa se pueden editar en `address` y `mapUrl` de `dist/config.js`. El mapa se carga al acercarse a esa sección.
 
 El botón de confirmación abre WhatsApp con un mensaje preparado; el invitado lo revisa y envía. La página no guarda confirmaciones automáticamente.
 

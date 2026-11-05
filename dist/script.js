@@ -22,7 +22,16 @@
   }
   if (config.time) $('#event-time').textContent = config.time;
   else if (config.date) $('#event-time').textContent = 'Horario por confirmar';
-  if (config.address) $('#event-address').textContent = config.address;
+  if (config.address) {
+    $('#event-address').textContent = config.address;
+    $('[data-map-address]').textContent = config.address;
+  }
+  if (config.mapUrl) {
+    const mapUrl = new URL(config.mapUrl);
+    $('#event-map-link').href = mapUrl.href;
+    mapUrl.searchParams.set('output', 'embed');
+    $('#event-map').src = mapUrl.href;
+  }
   if (config.date && config.time && config.address) $('#event-note').textContent = 'Te esperamos para compartir este día tan especial.';
   $('#account-number').textContent = config.account || '7860990';
   $('#account-holder').textContent = config.accountHolder || 'Aurora Jara';
