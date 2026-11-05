@@ -33,9 +33,14 @@
     $('#event-map').src = mapUrl.href;
   }
   if (config.date && config.time && config.address) $('#event-note').textContent = 'Te esperamos para compartir este día tan especial.';
-  $('#account-number').textContent = config.account || '7860990';
-  $('#account-holder').textContent = config.accountHolder || 'Aurora Jara';
-  $('#account-rut').textContent = config.accountRut || '7860990-7';
+  const accountNumber = config.account || '194191579398';
+  const accountType = config.accountType || 'Cuenta vista';
+  $('#account-number').textContent = accountNumber;
+  $('#account-holder').textContent = config.accountHolder || 'Luis Videla';
+  $('#account-rut').textContent = config.accountRut || '5590061-2';
+  document.querySelectorAll('[data-account-bank]').forEach(el => el.textContent = config.accountBank || 'Banco de Chile');
+  document.querySelectorAll('[data-account-type]').forEach(el => el.textContent = accountType);
+  $('.account-label').textContent = `Número de ${accountType.toLowerCase()}`;
   const confirmationPhone = config.whatsapp || '+56 9 7476 0287';
   const confirmationMessage = `¡Hola! Quisiera confirmar mi asistencia a las bodas de oro de ${config.names || 'Luis y Aurora'}${config.date ? ', el ' + config.date.charAt(0).toLowerCase() + config.date.slice(1) : ''}.`;
   $('#rsvp-link').href = `https://wa.me/${confirmationPhone.replace(/\D/g, '')}?text=${encodeURIComponent(confirmationMessage)}`;
@@ -171,7 +176,7 @@
     if (!copied) throw new Error('Copy unavailable');
   }
   $('#copy-account').addEventListener('click', async () => {
-    try { await copyText(config.account || '7860990'); $('#copy-status').textContent = 'Número copiado con cariño.'; }
+    try { await copyText(accountNumber); $('#copy-status').textContent = 'Número copiado con cariño.'; }
     catch { $('#copy-status').textContent = 'Puedes seleccionar y copiar el número que aparece arriba.'; }
   });
 })();

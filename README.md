@@ -21,8 +21,8 @@ Modifica `dist/config.js`:
 - Dirección: Aculeo, Miguel Letelier, parcela 1.
 - Mapa: punto confirmado en Google Maps, coordenadas -33.8655997, -70.8640892.
 - WhatsApp de confirmación: +56 9 7476 0287.
-- CuentaRUT: 7860990.
-- Titular: Aurora Jara; RUT: 7860990-7.
+- Cuenta vista: 194191579398, Banco de Chile.
+- Titular: Luis Videla; RUT: 5590061-2.
 
 Los textos y la estructura están en `dist/index.html`, los estilos en `dist/styles.css` y las interacciones en `dist/script.js`. Las tres fotografías originales se encuentran en `dist/assets/`.
 
