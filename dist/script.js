@@ -25,6 +25,8 @@
   if (config.address) $('#event-address').textContent = config.address;
   if (config.date && config.time && config.address) $('#event-note').textContent = 'Te esperamos para compartir este día tan especial.';
   $('#account-number').textContent = config.account || '7860990';
+  $('#account-holder').textContent = config.accountHolder || 'Aurora Jara';
+  $('#account-rut').textContent = config.accountRut || '7860990-7';
   const confirmationPhone = config.whatsapp || '+56 9 7476 0287';
   const confirmationMessage = `¡Hola! Quisiera confirmar mi asistencia a las bodas de oro de ${config.names || 'Luis y Aurora'}${config.date ? ', el ' + config.date.charAt(0).toLowerCase() + config.date.slice(1) : ''}.`;
   $('#rsvp-link').href = `https://wa.me/${confirmationPhone.replace(/\D/g, '')}?text=${encodeURIComponent(confirmationMessage)}`;

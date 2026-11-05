@@ -21,6 +21,7 @@ Modifica `dist/config.js`:
 - Lugar: Aculeo; dirección pendiente.
 - WhatsApp de confirmación: +56 9 7476 0287.
 - CuentaRUT: 7860990.
+- Titular: Aurora Jara; RUT: 7860990-7.
 
 Los textos y la estructura están en `dist/index.html`, los estilos en `dist/styles.css` y las interacciones en `dist/script.js`. Las tres fotografías originales se encuentran en `dist/assets/`.
 

@@ -127,6 +127,11 @@ dialog h2 { font-size: 46px; line-height: 1.05; margin: 16px 0; color: var(--gol
 dialog > p:not(.eyebrow):not(.status) { font-size: 12px; line-height: 1.85; color: var(--muted); }
 .account-details { border-block: 1px solid var(--line); margin: 23px 0 20px; padding: 18px; }
 .account-details span { font-size: 11px; display: block; }
+.account-recipient { display: grid; gap: 10px; margin: 0 0 16px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
+.account-recipient > div { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.account-recipient dt { font-size: 11px; color: var(--muted); }
+.account-recipient dd { margin: 0; font-size: 14px; color: var(--ink); }
+.account-details .account-label { margin-top: 7px; font-weight: 600; color: var(--ink); }
 .account-details strong { display: block; font: 500 34px var(--serif); letter-spacing: .08em; margin-top: 8px; color: var(--gold-deep); }
 .solid-button { display: flex; justify-content: space-between; align-items: center; width: 100%; background: var(--gold); color: #fffaf0; padding: 15px 18px; min-height: 49px; font-size: 12px; }
 .solid-button:hover { background: var(--gold-deep); }

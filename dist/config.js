@@ -5,5 +5,7 @@ window.INVITATION = {
   time: '', // Ejemplo: 'Desde las 18:00 horas'
   address: '', // Dirección del local en Aculeo
   account: '7860990',
+  accountHolder: 'Aurora Jara',
+  accountRut: '7860990-7',
   whatsapp: '+56 9 7476 0287'
 };
